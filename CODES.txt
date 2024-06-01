@@ -1,0 +1,66 @@
+	# describe nm     /     select * from nm   
+create database check_DQL;
+
+use check_dql;
+
+CREATE TABLE customer (
+    customer_id     INT AUTO_INCREMENT PRIMARY KEY,
+    customer_name   VARCHAR(50) DEFAULT 'userNAME',
+    customer_tel    INT );
+
+CREATE TABLE product(
+    product_id     INT AUTO_INCREMENT PRIMARY KEY,
+    product_name   VARCHAR(50) DEFAULT 'userNAME',
+    category	   varchar(50) ,
+    price	  INT NOT NULL );
+
+CREATE TABLE ORDERS( 
+    Order_id 	  INT AUTO_INCREMENT PRIMARY KEY,
+    Tcustomer	  INT ,
+    Tproduct	  INT ,
+    order_date	  date,
+    quantity	  INT,
+    total_amount  INT,
+    FOREIGN KEY (Tcustomer) REFERENCES customer(customer_id),
+    FOREIGN KEY (Tproduct)  REFERENCES product(product_id));
+    
+INSERT INTO customer (customer_name, customer_tel) VALUES
+('ADIL',0666666666),
+('ABDO',0777777777),
+('ANA',0666778899);
+
+INSERT INTO product (product_name, category, price) VALUES
+('Samsung s20', 'phone', 1500),
+('Samsung s27', 'phone', 2000),
+('Samsung s32', 'phone', 2400);
+
+
+INSERT INTO customer (customer_name, customer_tel) VALUES
+('rachid',0738236666),
+('foad',0777777777),
+('ANAs' ,0666778899);
+
+INSERT INTO product (product_name, category, price) VALUES
+('Samsung a50', 'phone', 2000),
+('Samsung a51', 'phone', 2300),
+('Samsung a57', 'phone', 2600),
+('Samsung a60', 'phone', 3000),
+('Samsung a64', 'phone', 3500),
+('Samsung a72', 'phone', 4300);
+
+INSERT INTO ORDERS (Tcustomer,Tproduct, order_date, quantity, total_amount) VALUES
+( 2 ,3 , '2023-4-19', 1, 2400),
+(4 ,1 , '2023-5-25' ,2 , 3000);
+
+INSERT INTO orders (Tcustomer, Tproduct, order_date, quantity, total_amount) VALUES
+(2, 3, '2023-04-19', 1, 2400),
+(4, 1, '2023-05-25', 2, 3000),
+(5, 9, '2024-06-20', 1, 4300),
+(1, 1, '2024-05-25', 3, 4500),
+(4, 1, '2023-05-25', 2, 3000);
+
+
+
+
+
+

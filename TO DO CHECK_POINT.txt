@@ -1,0 +1,26 @@
+check_point_DQL         DO...
+
+
+كتابة أوامر SQL لـ:
+
+عرض كافة بيانات العملاء
+عرض اسم المنتج والفئة للمنتجات التي يتراوح سعرها بين 5000 و10000
+عرض كافة بيانات المنتجات مرتبة حسب ترتيب تنازلي للسعر.
+عرض إجمالي عدد الطلبات ومتوسط ​​المبلغ وأعلى مبلغ إجمالي وأقل مبلغ إجمالي لكل معرف منتج، عرض عدد الطلبات
+عرض معرف العميل الذي يحتوي على أكثر من طلبين
+لكل شهر من عام 2020، عرض عدد الطلبات
+لكل طلب، عرض اسم المنتج واسم العميل وتاريخ الطلب
+عرض كافة الطلبات التي تم إجراؤها قبل ثلاثة أشهر
+عرض العملاء (معرف العميل) الذين لم يطلبوا منتجًا من قبل
+______________________________________________________
+Write SQL commands to:
+
+Display all the data of customers 
+Display the product_name and category for products which their price is between 5000 and 10000
+Display all the data of products sorted in descending order of price.
+Display the total number of orders, the average amount, the highest total amount and the lower total amountFor each product_id, display the number of orders
+Display the customer_id which has more than 2 orders   
+For each month of the 2020 year, display the number of orders
+For each order, display the product_name, the customer_name and the date of the order
+Display all the orders made three months ago 
+Display customers (customer_id) who have never ordered a product
